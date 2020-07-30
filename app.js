@@ -35,9 +35,16 @@ request.onload = function() {
 // end function
 
   // console.log(returnedStrings);
+
+  // now i have to display js content to html page to render
+  // locking in the html element to replace
   let accessWebpage = document.getElementById('root');
-  console.log(accessWebpage);
-  console.log(accessWebpage.innerHTML = returnedStrings[0]);
+
+  // each new tab must have a different sentence
+  let randomString = Math.floor(Math.random() * returnedStrings.length);
+
+  // rendering content to html page randomly 
+  console.log(accessWebpage.innerHTML = returnedStrings[randomString]);
 }
 
 
