@@ -1,4 +1,9 @@
 h1 {
   font-family: Helvetica;
   text-align: center;
+  color: white;
+}
+
+* {
+  background-color: black;
 }

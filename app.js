@@ -16,16 +16,27 @@ request.onload = function() {
   // get the response and assign the contents to a variable
   let data = JSON.parse(this.response);
 
-// accessing block array
-  let textContent = data.contents;
-  // console.log(textContent);
+// accessing nested content array
+  let blockContent = data.contents;
+  // console.log(blockContent);
 
-  // for loop to output each string from the array
-  for (var i = 0; i < textContent.length; i++) {
+  // for loop to output each string content from other nested json contents
+  for (var i = 0; i < blockContent.length; i++) {
     // a variable that stores strings from the array
-    returnedStrings.push(textContent[i].content);
+    returnedStrings.push(blockContent[i].content);
   }
   console.log(returnedStrings);
+
+// a function to search if a string exists in the returned array
+  function getString(textToFind) {
+    console.log("this text is in the function");
+    let foundTextPos = returnedStrings.indexOf(textToFind);
+    console.log(returnedStrings[foundTextPos] + " found!");
+  }
+  getString("Fasting.");
+// end function
+
+
 }
 
 
