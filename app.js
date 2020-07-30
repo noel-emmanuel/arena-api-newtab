@@ -34,9 +34,10 @@ request.onload = function() {
   }
 // end function
 
-// now pushing more content to the array until all content from channel is loaded onto array
-
-  console.log(returnedStrings);
+  // console.log(returnedStrings);
+  let accessWebpage = document.getElementById('root');
+  console.log(accessWebpage);
+  console.log(accessWebpage.innerHTML = returnedStrings[0]);
 }
 
 

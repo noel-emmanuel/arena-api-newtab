@@ -1,9 +1,37 @@
-h1 {
+* {
+  background-color: black;
   font-family: Helvetica;
-  text-align: center;
   color: white;
 }
 
-* {
-  background-color: black;
+.footer {
+  font-size: 20px;
+  text-align: center;
+  position: fixed;
+  margin: 20px;
+  color: gray;
+}
+
+h1.footer {
+  bottom: 0%;
+  right: 0%;
+  font-weight: normal;
+}
+
+a.footer {
+  bottom: 0%;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+
+
+
+
+#root {
+  margin-right: 30%;
+  margin-left: 30%;
+  margin-top: 20%;
+  font-size: 25px;
+  text-align: center;
 }
