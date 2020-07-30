@@ -3,7 +3,6 @@
   "manifest_version": 2,
   "name": "Simple Pleasures NewTab",
   "description": "a quote from the catalog of simple pleasures on are.na; different on each new tab",
-  "default_locale": "en",
   "author": "Noel Emmanuel",
   "permissions": ["tabs"],
   "version": "0.1",
