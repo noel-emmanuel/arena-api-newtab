@@ -4,6 +4,7 @@ console.log("yo the js file is linked");
 let request = new XMLHttpRequest();
 
 // assigning api url to variable
+// note this is the first page and only returns 100 strings for some reason (order: oldest to newest)
 let api_url = 'https://api.are.na/v2/channels/a-catalogue-of-simple-pleasures?page=1amp;per=300';
 // GET http://api.are.na/v2/channels?page=2&amp;per=15
 // requesting and opening connection to api url
@@ -25,18 +26,17 @@ request.onload = function() {
     // a variable that stores strings from the array
     returnedStrings.push(blockContent[i].content);
   }
-  console.log(returnedStrings);
 
 // a function to search if a string exists in the returned array
   function getString(textToFind) {
-    console.log("this text is in the function");
     let foundTextPos = returnedStrings.indexOf(textToFind);
     console.log(returnedStrings[foundTextPos] + " found!");
   }
-  getString("Fasting.");
 // end function
 
+// now pushing more content to the array until all content from channel is loaded onto array
 
+  console.log(returnedStrings);
 }
 
 
