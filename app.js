@@ -8,6 +8,7 @@ let api_url = 'https://api.are.na/v2/channels/a-catalogue-of-simple-pleasures?pa
 // GET http://api.are.na/v2/channels?page=2&amp;per=15
 // requesting and opening connection to api url
 request.open('GET', api_url);
+let returnedStrings = [];
 
 // as soon as the page is loaded...
 request.onload = function() {
@@ -21,13 +22,11 @@ request.onload = function() {
 
   // for loop to output each string from the array
   for (var i = 0; i < textContent.length; i++) {
-    let returnedStrings = textContent[i].content;
-    console.log(returnedStrings);
-    // let accessWebpage = document.getElementById('root');
-    // console.log(accessWebpage.innerHTML = "<li>" + returnedStrings + "</li>");
+    // a variable that stores strings from the array
+    returnedStrings.push(textContent[i].content);
   }
+  console.log(returnedStrings);
 }
-
 
 
 request.send();
